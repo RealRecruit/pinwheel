@@ -1,0 +1,21 @@
+<% content_for :title, "#{Current.account.name} projects" %>
+
+<div class="flex items-center justify-between mb-6">
+  <h1 class="text-2xl font-semibold">Projects</h1>
+  <%= link_to "New project", new_account_project_path(Current.account), class: "rounded-md bg-blue-600 px-4 py-2 text-sm text-white font-medium hover:bg-blue-500" %>
+</div>
+
+<div class="flex gap-4 border-b border-gray-200 mb-6 text-sm">
+  <%= link_to "Active", account_projects_path(Current.account),
+        class: class_names("pb-2 -mb-px border-b-2", params[:archived] ? "border-transparent text-gray-500 hover:text-gray-700" : "border-blue-600 font-medium") %>
+  <%= link_to "Archived", account_projects_path(Current.account, archived: true),
+        class: class_names("pb-2 -mb-px border-b-2", params[:archived] ? "border-blue-600 font-medium" : "border-transparent text-gray-500 hover:text-gray-700") %>
+</div>
+
+<% if @projects.any? %>
+  <ul class="bg-white border border-gray-200 rounded-lg divide-y divide-gray-200">
+    <%= render partial: "projects/project", collection: @projects %>
+  </ul>
+<% else %>
+  <p class="text-gray-600"><%= params[:archived] ? "No archived projects." : "No projects yet." %></p>
+<% end %>

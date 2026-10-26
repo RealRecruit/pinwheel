@@ -1,0 +1,9 @@
+Hi <%= @user.first_name %>,
+
+You've been added to <%= @project.name %> in <%= @project.account.name %>.
+<% if @project.description.present? %>
+
+<%= @project.description %>
+<% end %>
+
+Open the project: <%= account_project_url(@project.account, @project) %>

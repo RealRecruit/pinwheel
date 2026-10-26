@@ -1,0 +1,7 @@
+<li id="<%= dom_id(comment) %>" class="bg-white border border-gray-200 rounded-lg px-4 py-3">
+  <div class="flex items-baseline justify-between gap-4 text-sm">
+    <span class="font-medium"><%= comment.creator.name %></span>
+    <time datetime="<%= comment.created_at.iso8601 %>" class="text-xs text-gray-500"><%= time_ago_in_words(comment.created_at) %> ago</time>
+  </div>
+  <p class="mt-1 text-gray-800 whitespace-pre-line"><%= comment.body %></p>
+</li>

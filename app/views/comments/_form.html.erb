@@ -1,0 +1,7 @@
+<%= form_with model: comment, url: account_project_comments_path(project.account, project), class: "space-y-2" do |form| %>
+  <%= render "shared/errors", record: comment %>
+
+  <%= form.label :body, "Add a comment", class: "block text-sm font-medium text-gray-700" %>
+  <%= form.textarea :body, rows: 3, required: true, class: "block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-blue-600" %>
+  <%= form.submit "Post comment", class: "rounded-md bg-blue-600 px-4 py-2 text-sm text-white font-medium hover:bg-blue-500 cursor-pointer" %>
+<% end %>

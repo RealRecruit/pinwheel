@@ -1,0 +1,6 @@
+tom_welcome:
+  user: tom
+  device: tom_pixel
+  title: Welcome to Pinwheel
+  body: You're all set to get updates on this device.
+  delivered_at: <%= 1.day.ago.to_fs(:db) %>

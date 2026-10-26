@@ -1,0 +1,7 @@
+<p>Hi <%= @recipient.first_name %>,</p>
+
+<p><%= @comment.creator.name %> commented on <strong><%= @project.name %></strong>:</p>
+
+<blockquote><%= @comment.body %></blockquote>
+
+<p><%= link_to "View the conversation", account_project_url(@project.account, @project, anchor: dom_id(@comment)) %></p>

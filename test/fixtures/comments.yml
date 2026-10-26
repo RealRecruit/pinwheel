@@ -1,0 +1,23 @@
+website_kickoff:
+  project: website
+  creator: dana
+  body: Kicking this off. Marcus, can you pull together the current page analytics?
+  created_at: <%= 3.days.ago.to_fs(:db) %>
+
+launch_checklist:
+  project: launch
+  creator: tom
+  body: Checklist is in the shared drive. Please add anything missing by Friday.
+  created_at: <%= 2.days.ago.to_fs(:db) %>
+
+launch_copy:
+  project: launch
+  creator: lena
+  body: Release notes draft is ready for review.
+  created_at: <%= 1.day.ago.to_fs(:db) %>
+
+billing_export:
+  project: billing
+  creator: lena
+  body: Export from the old system finished overnight, 14k invoices.
+  created_at: <%= 5.hours.ago.to_fs(:db) %>

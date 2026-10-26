@@ -1,0 +1,17 @@
+<% accounts = Current.user.accounts.order(:name) %>
+
+<% if accounts.any? %>
+  <details class="relative">
+    <summary class="cursor-pointer list-none rounded-md border border-gray-200 px-3 py-1.5 text-sm hover:bg-gray-50">
+      <%= Current.account&.name || "Accounts" %> &#9662;
+    </summary>
+
+    <ul class="absolute left-0 z-10 mt-1 w-56 rounded-md border border-gray-200 bg-white py-1 shadow-lg">
+      <% accounts.each do |account| %>
+        <li>
+          <%= link_to account.name, account_projects_path(account), class: class_names("block px-3 py-2 text-sm hover:bg-gray-50", "font-semibold": account == Current.account) %>
+        </li>
+      <% end %>
+    </ul>
+  </details>
+<% end %>

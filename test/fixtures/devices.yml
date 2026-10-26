@@ -1,0 +1,20 @@
+dana_iphone:
+  user: dana
+  platform: ios
+  token: 3f9a1c0e7b2d4a6f8e1c5b7d9a0f2e4c
+  name: Dana's iPhone
+  last_seen_at: <%= 2.hours.ago.to_fs(:db) %>
+
+dana_tablet:
+  user: dana
+  platform: android
+  token: fcm-dk81_Qx2nT0aLw9eZr4yHc
+  name: Dana's Galaxy Tab
+  last_seen_at: <%= 3.days.ago.to_fs(:db) %>
+
+tom_pixel:
+  user: tom
+  platform: android
+  token: fcm-p7Vb3mKs0QeN2dYx5uJw
+  name: Tom's Pixel
+  last_seen_at: <%= 1.day.ago.to_fs(:db) %>

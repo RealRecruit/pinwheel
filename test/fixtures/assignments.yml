@@ -1,0 +1,31 @@
+dana_website:
+  project: website
+  user: dana
+
+marcus_website:
+  project: website
+  user: marcus
+
+dana_launch:
+  project: launch
+  user: dana
+
+tom_launch:
+  project: launch
+  user: tom
+
+lena_launch:
+  project: launch
+  user: lena
+
+dana_billing:
+  project: billing
+  user: dana
+
+lena_billing:
+  project: billing
+  user: lena
+
+dana_intranet:
+  project: intranet
+  user: dana

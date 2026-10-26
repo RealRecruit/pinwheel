@@ -1,0 +1,15 @@
+<% content_for :title, "Accounts" %>
+
+<h1 class="text-2xl font-semibold mb-6">Your accounts</h1>
+
+<% if @accounts.any? %>
+  <ul class="bg-white border border-gray-200 rounded-lg divide-y divide-gray-200">
+    <% @accounts.each do |account| %>
+      <li>
+        <%= link_to account.name, account_projects_path(account), class: "block px-4 py-3 hover:bg-gray-50 font-medium" %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="text-gray-600">You don't belong to any accounts yet. Ask an admin to add you.</p>
+<% end %>

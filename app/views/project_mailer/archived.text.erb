@@ -1,0 +1,7 @@
+Hi <%= @user.first_name %>,
+
+<%= @project.name %> in <%= @project.account.name %> was archived on <%= @project.archived_at.to_date.to_fs(:long) %>.
+
+The project and its comments are still available under Archived projects.
+
+View the project: <%= account_project_url(@project.account, @project) %>

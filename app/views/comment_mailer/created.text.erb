@@ -1,0 +1,7 @@
+Hi <%= @recipient.first_name %>,
+
+<%= @comment.creator.name %> commented on <%= @project.name %>:
+
+<%= @comment.body %>
+
+View the conversation: <%= account_project_url(@project.account, @project, anchor: dom_id(@comment)) %>

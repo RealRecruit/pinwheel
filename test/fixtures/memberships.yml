@@ -1,0 +1,24 @@
+dana_northwind:
+  account: northwind
+  user: dana
+  role: admin
+
+marcus_northwind:
+  account: northwind
+  user: marcus
+  role: member
+
+dana_globex:
+  account: globex
+  user: dana
+  role: member
+
+tom_globex:
+  account: globex
+  user: tom
+  role: admin
+
+lena_globex:
+  account: globex
+  user: lena
+  role: member

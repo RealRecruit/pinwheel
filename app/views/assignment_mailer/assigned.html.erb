@@ -1,0 +1,9 @@
+<p>Hi <%= @user.first_name %>,</p>
+
+<p>You've been added to <strong><%= @project.name %></strong> in <%= @project.account.name %>.</p>
+
+<% if @project.description.present? %>
+  <blockquote><%= @project.description %></blockquote>
+<% end %>
+
+<p><%= link_to "Open the project", account_project_url(@project.account, @project) %></p>

@@ -1,0 +1,23 @@
+website:
+  account: northwind
+  creator: dana
+  name: Website refresh
+  description: New homepage and pricing page.
+
+launch:
+  account: globex
+  creator: tom
+  name: Q4 launch
+  description: Everything we need for the October release.
+
+billing:
+  account: globex
+  creator: lena
+  name: Billing migration
+  description: Move invoicing off the legacy system.
+
+intranet:
+  account: globex
+  creator: tom
+  name: Old intranet
+  archived_at: <%= 2.weeks.ago.to_fs(:db) %>
